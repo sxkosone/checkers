@@ -1,0 +1,44 @@
+table {
+  border-collapse: collapse;
+  min-width: 400px;
+  min-height: 400px;
+}
+td {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+/*RED SQUARES*/
+tr:nth-child(odd) td:nth-child(odd) {
+  background-color: red;
+}
+tr:nth-child(even) td:nth-child(even) {
+  background-color: red;
+}
+/*BLACKS*/
+tr:nth-child(odd) td:nth-child(even) {
+  background-color: black;
+}
+tr:nth-child(even) td:nth-child(odd) {
+  background-color: black;
+}
+
+/*RED PIECES*/
+.piece-red {
+  width: 43px;
+  height: 43px;
+  border-radius: 100%;
+  background: linear-gradient(#ff3535, #8e0101) ;
+  border: 1px solid #a80010;
+  margin-left: 2.5px;
+}
+/*BLACK PIECES*/
+.piece-black {
+  width: 43px;
+  height: 43px;
+  border-radius: 100%;
+  background: linear-gradient(black, #595959) ;
+  border: 1px solid grey;
+  margin-left: 2.5px;
+
+}
