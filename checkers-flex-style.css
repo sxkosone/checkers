@@ -1,0 +1,58 @@
+/* Box-sizing border-box */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@import "compass/css3";
+
+.wrapper {
+  padding: 20px;
+  margin: 0 auto;
+}
+/*Row as flex-container*/
+.row {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+/*Default styles for all squares to be square shape accross different widths*/
+/*Box is both a flex item and a flex container*/
+.box {
+  flex: 1 0 0px;
+  height: auto;
+  display: flex;
+}
+
+/*Pseudo element to make box height responsive to width*/
+.box:before {
+  content:'';
+  float:left;
+  padding-top:100%;
+}
+
+/*Red and black squares*/
+.red-square { background: red; }
+.black-square { background: black; }
+
+/*Red and black pieces. Piece is the flex item for box*/
+.piece {
+  flex: 1 1 0px;
+  border-radius: 100%;
+  margin: 5px;
+  align-content: center;
+}
+.red {
+  background: linear-gradient(#ff3535, #8e0101) ;
+  border: 1px solid black;
+
+}
+.black {
+  background: linear-gradient(black, #595959) ;
+  border: 1px solid grey;
+}
+
+/*Max width for desktop screens only*/
+@media all and (min-width: 696px) {
+  .wrapper {
+    max-width: 640px;
+  }
+}
