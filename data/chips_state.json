@@ -1,0 +1,201 @@
+// This data can be used to render and manage the state of the chips on the board
+
+// This data relies on the matched-naming of spaces on the checkers board
+
+{
+
+	"player1" : {
+
+		"name" : "Michele",
+
+		"color" : "black",
+
+		"chips" : {
+
+			"1" : {
+				"defaultSpace" : "a1",
+				"currentSpace" : "a1",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"2" : {
+				"defaultSpace" : "c1",
+				"currentSpace" : "c1",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"3" : {
+				"defaultSpace" : "e1",
+				"currentSpace" : "e1",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"4" : {
+				"defaultSpace" : "g1",
+				"currentSpace" : "g1",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"5" : {
+				"defaultSpace" : "b2",
+				"currentSpace" : "b2",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"6" : {
+				"defaultSpace" : "d2",
+				"currentSpace" : "d2",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"7" : {
+				"defaultSpace" : "f2",
+				"currentSpace" : "f2",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"8" : {
+				"defaultSpace" : "h2",
+				"currentSpace" : "h2",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"9" : {
+				"defaultSpace" : "a3",
+				"currentSpace" : "a3",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"10" : {
+				"defaultSpace" : "c3",
+				"currentSpace" : "c3",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"11" : {
+				"defaultSpace" : "e3",
+				"currentSpace" : "e3",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"12" : {
+				"defaultSpace" : "g3",
+				"currentSpace" : "g3",
+				"isKing" : false,
+				"isCaptured" : false
+			}
+
+		}
+
+	},
+
+	"player2" : {
+
+		"name" : "Susanna",
+
+		"color" : "red",
+
+		"chips" : {
+
+			"1" : {
+				"defaultSpace" : "b8",
+				"currentSpace" : "b8",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"2" : {
+				"defaultSpace" : "d8",
+				"currentSpace" : "d8",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"3" : {
+				"defaultSpace" : "f8",
+				"currentSpace" : "f8",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"4" : {
+				"defaultSpace" : "h8",
+				"currentSpace" : "h8",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"5" : {
+				"defaultSpace" : "a7",
+				"currentSpace" : "a7",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"6" : {
+				"defaultSpace" : "c7",
+				"currentSpace" : "c7",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"7" : {
+				"defaultSpace" : "e7",
+				"currentSpace" : "e7",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"8" : {
+				"defaultSpace" : "g7",
+				"currentSpace" : "g7",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"9" : {
+				"defaultSpace" : "b6",
+				"currentSpace" : "b6",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"10" : {
+				"defaultSpace" : "d6",
+				"currentSpace" : "d6",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"11" : {
+				"defaultSpace" : "f6",
+				"currentSpace" : "f6",
+				"isKing" : false,
+				"isCaptured" : false
+			},
+
+			"12" : {
+				"defaultSpace" : "h6",
+				"currentSpace" : "h6",
+				"isKing" : false,
+				"isCaptured" : false
+			}
+
+		}
+
+	}
+
+}
+
+
