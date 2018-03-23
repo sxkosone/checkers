@@ -6,11 +6,14 @@
   <link rel="stylesheet" href="checkers-flex-style.css" type="text/css">
 </head>
 <body>
+  <div id="game">
+  <h4>Player 1: {{ player1.name }}, chip color: {{ player1.color }}</h4>
+  <h4>Player 2: {{ player2.name }}, chip color: {{ player2.color }}</h4>
 
-  <div class ="wrapper">
+  <div class="wrapper">
     <!--8th row -->
     <div class="row">
-      <div class="box red-square"><div class="piece black"></div></div>
+      <div class="box red-square"></div>
       <div class="box black-square" id="b8" nextValidSquare="['a7', 'c7']"><div class="piece red"></div></div>
       <div class="box red-square"><div class="piece red"></div></div>
       <div class="box black-square" id="d8" nextValidSquare="['c7', 'e7']"><div class="piece black"></div></div>
@@ -87,15 +90,95 @@
     </div>
     <!--1st row -->
     <div class="row">
-      <div class="box black-square" id="a1" nextValidSquare="['b2']"></div>
+
+      <div class="box black-square" id="a1" nextValidSquare="['b2']">
+        <div class="piece black" :id="player1.chips[0].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="c1" nextValidSquare="['b2', 'd2']"></div>
+
+      <div class="box black-square" id="c1" nextValidSquare="['b2', 'd2']">
+        <div class="piece black" :id="player1.chips[1].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="e1" nextValidSquare="['d2', 'f2']"></div>
+
+      <div class="box black-square" id="e1" nextValidSquare="['d2', 'f2']">
+        <div class="piece black" :id="player1.chips[2].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="g1" nextValidSquare="['f2', 'h2']"></div>
+
+      <div class="box black-square" id="g1" nextValidSquare="['f2', 'h2']">
+        <div class="piece black" :id="player1.chips[3].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
     </div>
   </div>
+</div>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+
+    new Vue({
+      el: '#game',
+      // data: chips :: when the chips_state.json can be imported, we can store it in a variable, such as `chips`, but for this part I will hardcode the data...
+      data: {
+
+        player1 : {
+
+          name: "Michele",
+
+          color: "black",
+
+          chips : [
+
+            {
+              chipId : "black-1",
+              defaultSpace : "a1",
+              currentSpace : "a1",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-2",
+              defaultSpace : "c1",
+              currentSpace : "c1",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-3",
+              defaultSpace : "e1",
+              currentSpace : "e1",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-4",
+              defaultSpace : "g1",
+              currentSpace : "g1",
+              isKing : false,
+              isCaptured : false
+            }
+
+          ]
+      },
+
+        player2 : {
+
+          name: "Susanna",
+
+          color: "red"
+
+        }
+
+      }
+    })
+
+  </script>
 </body>
