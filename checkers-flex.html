@@ -13,80 +13,195 @@
   <div class="wrapper">
     <!--8th row -->
     <div class="row">
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="b8" nextValidSquare="['a7', 'c7']"><div class="piece red"></div></div>
-      <div class="box red-square"><div class="piece red"></div></div>
-      <div class="box black-square" id="d8" nextValidSquare="['c7', 'e7']"><div class="piece black"></div></div>
+
+      <div class="box black-square" id="b8" nextValidSquare="['a7', 'c7']">
+        <div class="piece red" :id="player2.chips[0].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="f8" nextValidSquare="['e7', 'g7']"></div>
+
+      <div class="box black-square" id="d8" nextValidSquare="['c7', 'e7']">
+        <div class="piece red" :id="player2.chips[1].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="h8" nextValidSquare="['g7']"></div>
+
+      <div class="box black-square" id="f8" nextValidSquare="['e7', 'g7']">
+        <div class="piece red" :id="player2.chips[2].chipId"></div>
+      </div>
+
+      <div class="box red-square"></div>
+
+      <div class="box black-square" id="h8" nextValidSquare="['g7']">
+        <div class="piece red" :id="player2.chips[3].chipId"></div>
+      </div>
+
     </div>
     <!--7th row -->
     <div class="row">
-      <div class="box black-square" id="a7" nextValidSquare="['b8', 'b6']"></div>
+
+      <div class="box black-square" id="a7" nextValidSquare="['b8', 'b6']">
+        <div class="piece red" :id="player2.chips[4].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="c7" nextValidSquare="['b6', 'b8', 'd8', 'd6']"></div>
+
+      <div class="box black-square" id="c7" nextValidSquare="['b6', 'b8', 'd8', 'd6']">
+        <div class="piece red" :id="player2.chips[5].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="e7" nextValidSquare="['d6', 'd8', 'f8', 'f6']"></div>
+
+      <div class="box black-square" id="e7" nextValidSquare="['d6', 'd8', 'f8', 'f6']">
+        <div class="piece red" :id="player2.chips[6].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="g7" nextValidSquare="['f6', 'f8', 'h8', 'h6']"></div>
+
+      <div class="box black-square" id="g7" nextValidSquare="['f6', 'f8', 'h8', 'h6']">
+        <div class="piece red" :id="player2.chips[7].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
+
     </div>
     <!--6th row -->
     <div class="row">
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="b6" nextValidSquare="['a5', 'a7', 'c7', 'c5']"></div>
+
+      <div class="box black-square" id="b6" nextValidSquare="['a5', 'a7', 'c7', 'c5']">
+        <div class="piece red" :id="player2.chips[8].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="d6" nextValidSquare="['c5', 'c7', 'd7', 'e5']"></div>
+
+      <div class="box black-square" id="d6" nextValidSquare="['c5', 'c7', 'd7', 'e5']">
+        <div class="piece red" :id="player2.chips[9].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="f6" nextValidSquare="['e5', 'e7', 'g7', 'g5']"></div>
+
+      <div class="box black-square" id="f6" nextValidSquare="['e5', 'e7', 'g7', 'g5']">
+        <div class="piece red" :id="player2.chips[10].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="h6" nextValidSquare="['g5', 'g7']"></div>
+
+      <div class="box black-square" id="h6" nextValidSquare="['g5', 'g7']">
+        <div class="piece red" :id="player2.chips[11].chipId"></div>
+      </div>
     </div>
     <!--5th row -->
     <div class="row">
-      <div class="box black-square" id="a5" nextValidSquare="['b6', 'b4']"></div>
+
+      <div class="box black-square" id="a5" nextValidSquare="['b6', 'b4']">
+        
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="c5" nextValidSquare="['b4', 'b6', 'd6', 'd4']"></div>
+
+      <div class="box black-square" id="c5" nextValidSquare="['b4', 'b6', 'd6', 'd4']">
+        
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="e5" nextValidSquare="['d4', 'd6', 'f6', 'f4']"></div>
+
+      <div class="box black-square" id="e5" nextValidSquare="['d4', 'd6', 'f6', 'f4']">
+        
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="g5" nextValidSquare="['f4', 'f6', 'h6', 'h4']"></div>
+
+      <div class="box black-square" id="g5" nextValidSquare="['f4', 'f6', 'h6', 'h4']">
+        
+      </div>
+
       <div class="box red-square"></div>
+
     </div>
     <!--4th row -->
     <div class="row">
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="b4" nextValidSquare="['a3', 'a5', 'c5', 'c3']"></div>
+
+      <div class="box black-square" id="b4" nextValidSquare="['a3', 'a5', 'c5', 'c3']">
+        
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="d4" nextValidSquare="['c3', 'c5', 'e5', 'e3']"></div>
+
+      <div class="box black-square" id="d4" nextValidSquare="['c3', 'c5', 'e5', 'e3']">
+        
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="f4" nextValidSquare="['e3', 'e5', 'g5', 'g3']"></div>
+
+      <div class="box black-square" id="f4" nextValidSquare="['e3', 'e5', 'g5', 'g3']">
+        
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="h4" nextValidSquare="['g3', 'g5']"></div>
+
+      <div class="box black-square" id="h4" nextValidSquare="['g3', 'g5']">
+        
+      </div>
+
     </div>
     <!--3rd row -->
     <div class="row">
-      <div class="box black-square" id="a3" nextValidSquare="['b4', 'b2']"></div>
+
+      <div class="box black-square" id="a3" nextValidSquare="['b4', 'b2']">
+        <div class="piece black" :id="player1.chips[8].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="c3" nextValidSquare="['b2', 'b4', 'd4', 'd2']"></div>
+
+      <div class="box black-square" id="c3" nextValidSquare="['b2', 'b4', 'd4', 'd2']">
+        <div class="piece black" :id="player1.chips[9].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="e3" nextValidSquare="['d2', 'd4', 'f4', 'f2']"></div>
+
+      <div class="box black-square" id="e3" nextValidSquare="['d2', 'd4', 'f4', 'f2']">
+        <div class="piece black" :id="player1.chips[10].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
-      <div class="box black-square" id="g3" nextValidSquare="['f2', 'f4', 'h4', 'h2']"></div>
+
+      <div class="box black-square" id="g3" nextValidSquare="['f2', 'f4', 'h4', 'h2']">
+        <div class="piece black" :id="player1.chips[11].chipId"></div>
+      </div>
+
       <div class="box red-square"></div>
     </div>
     <!--2nd row -->
     <div class="row">
+      
       <div class="box red-square"></div>
-      <div class="box black-square" id="b2" nextValidSquare="['a1', 'a3', 'c3', 'c1']"></div>
+      
+      <div class="box black-square" id="b2" nextValidSquare="['a1', 'a3', 'c3', 'c1']">
+        <div class="piece black" :id="player1.chips[4].chipId"></div>
+      </div>
+      
       <div class="box red-square"></div>
-      <div class="box black-square" id="d2" nextValidSquare="['c1', 'c3', 'e3', 'e1']"></div>
+      
+      <div class="box black-square" id="d2" nextValidSquare="['c1', 'c3', 'e3', 'e1']">
+        <div class="piece black" :id="player1.chips[5].chipId"></div>
+      </div>
       <div class="box red-square"></div>
-      <div class="box black-square" id="f2" nextValidSquare="['e1', 'e3', 'h3', 'h1']"></div>
+
+      <div class="box black-square" id="f2" nextValidSquare="['e1', 'e3', 'h3', 'h1']">
+        <div class="piece black" :id="player1.chips[6].chipId"></div>
+      </div>
       <div class="box red-square"></div>
-      <div class="box black-square" id="h2" nextValidSquare="['g1', 'g3']"></div>
+
+      <div class="box black-square" id="h2" nextValidSquare="['g1', 'g3']">
+        <div class="piece black" :id="player1.chips[7].chipId"></div>
+      </div>
+
     </div>
     <!--1st row -->
     <div class="row">
@@ -164,6 +279,70 @@
               currentSpace : "g1",
               isKing : false,
               isCaptured : false
+            },
+
+            {
+              chipId : "black-5",
+              defaultSpace : "b2",
+              currentSpace : "b2",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-6",
+              defaultSpace : "d2",
+              currentSpace : "d2",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-7",
+              defaultSpace : "f2",
+              currentSpace : "f2",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-8",
+              defaultSpace : "h2",
+              currentSpace : "h2",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-9",
+              defaultSpace : "a3",
+              currentSpace : "a3",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-10",
+              defaultSpace : "c3",
+              currentSpace : "c3",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-11",
+              defaultSpace : "e3",
+              currentSpace : "e3",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-12",
+              defaultSpace : "g3",
+              currentSpace : "g3",
+              isKing : false,
+              isCaptured : false
             }
 
           ]
@@ -173,7 +352,107 @@
 
           name: "Susanna",
 
-          color: "red"
+          color: "red",
+
+          chips : [
+
+            {
+              chipId : "red-1",
+              defaultSpace : "b8",
+              currentSpace : "b8",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-2",
+              defaultSpace : "d8",
+              currentSpace : "d8",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-3",
+              defaultSpace : "f8",
+              currentSpace : "f8",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-4",
+              defaultSpace : "h8",
+              currentSpace : "h8",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-5",
+              defaultSpace : "a7",
+              currentSpace : "a7",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-6",
+              defaultSpace : "c7",
+              currentSpace : "c7",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-7",
+              defaultSpace : "e7",
+              currentSpace : "e7",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-8",
+              defaultSpace : "g7",
+              currentSpace : "g7",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-9",
+              defaultSpace : "b6",
+              currentSpace : "b6",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-10",
+              defaultSpace : "d6",
+              currentSpace : "d6",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-11",
+              defaultSpace : "f6",
+              currentSpace : "f6",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-12",
+              defaultSpace : "h6",
+              currentSpace : "h6",
+              isKing : false,
+              isCaptured : false
+            }
+
+          ]
 
         }
 
