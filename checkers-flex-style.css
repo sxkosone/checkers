@@ -40,6 +40,14 @@
   margin: 5px;
   align-content: center;
 }
+/* make the non-captured chips appear clickable to the user */
+.chip:not([isCaptured]) {
+  cursor: pointer;
+}
+.chip.selected {
+  border: 2px solid yellow;
+}
+
 .red {
   background: linear-gradient(#ff3535, #8e0101) ;
   border: 1px solid black;

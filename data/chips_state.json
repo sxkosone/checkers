@@ -1,7 +1,3 @@
-// This data can be used to render and manage the state of the chips on the board
-
-// This data relies on the matched-naming of Squares on the checkers board
-
 {
 
   "player1" : {
