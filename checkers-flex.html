@@ -6,96 +6,457 @@
   <link rel="stylesheet" href="checkers-flex-style.css" type="text/css">
 </head>
 <body>
+  <div id="game">
+  <h4>Player 1: {{ player1.name }}, chip color: {{ player1.color }}</h4>
+  <h4>Player 2: {{ player2.name }}, chip color: {{ player2.color }}</h4>
 
-  <div class ="wrapper">
+  <div class="wrapper">
     <!--8th row -->
     <div class="row">
-      <div class="box red-square"><div class="piece black"></div></div>
-      <div class="box black-square" id="b8" nextValidSquare="['a7', 'c7']"><div class="piece red"></div></div>
-      <div class="box red-square"><div class="piece red"></div></div>
-      <div class="box black-square" id="d8" nextValidSquare="['c7', 'e7']"><div class="piece black"></div></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="f8" nextValidSquare="['e7', 'g7']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="h8" nextValidSquare="['g7']"></div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="b8" nextValidSquare="['a7', 'c7']">
+        <div class="chip red" :id="player2.chips[0].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="d8" nextValidSquare="['c7', 'e7']">
+        <div class="chip red" :id="player2.chips[1].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="f8" nextValidSquare="['e7', 'g7']">
+        <div class="chip red" :id="player2.chips[2].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="h8" nextValidSquare="['g7']">
+        <div class="chip red" :id="player2.chips[3].chipId"></div>
+      </div>
+
     </div>
     <!--7th row -->
     <div class="row">
-      <div class="box black-square" id="a7" nextValidSquare="['b8', 'b6']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="c7" nextValidSquare="['b6', 'b8', 'd8', 'd6']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="e7" nextValidSquare="['d6', 'd8', 'f8', 'f6']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="g7" nextValidSquare="['f6', 'f8', 'h8', 'h6']"></div>
-      <div class="box red-square"></div>
+
+      <div class="square black-square" id="a7" nextValidSquare="['b8', 'b6']">
+        <div class="chip red" :id="player2.chips[4].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="c7" nextValidSquare="['b6', 'b8', 'd8', 'd6']">
+        <div class="chip red" :id="player2.chips[5].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="e7" nextValidSquare="['d6', 'd8', 'f8', 'f6']">
+        <div class="chip red" :id="player2.chips[6].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="g7" nextValidSquare="['f6', 'f8', 'h8', 'h6']">
+        <div class="chip red" :id="player2.chips[7].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
     </div>
     <!--6th row -->
     <div class="row">
-      <div class="box red-square"></div>
-      <div class="box black-square" id="b6" nextValidSquare="['a5', 'a7', 'c7', 'c5']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="d6" nextValidSquare="['c5', 'c7', 'd7', 'e5']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="f6" nextValidSquare="['e5', 'e7', 'g7', 'g5']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="h6" nextValidSquare="['g5', 'g7']"></div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="b6" nextValidSquare="['a5', 'a7', 'c7', 'c5']">
+        <div class="chip red" :id="player2.chips[8].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="d6" nextValidSquare="['c5', 'c7', 'd7', 'e5']">
+        <div class="chip red" :id="player2.chips[9].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="f6" nextValidSquare="['e5', 'e7', 'g7', 'g5']">
+        <div class="chip red" :id="player2.chips[10].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="h6" nextValidSquare="['g5', 'g7']">
+        <div class="chip red" :id="player2.chips[11].chipId"></div>
+      </div>
     </div>
     <!--5th row -->
     <div class="row">
-      <div class="box black-square" id="a5" nextValidSquare="['b6', 'b4']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="c5" nextValidSquare="['b4', 'b6', 'd6', 'd4']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="e5" nextValidSquare="['d4', 'd6', 'f6', 'f4']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="g5" nextValidSquare="['f4', 'f6', 'h6', 'h4']"></div>
-      <div class="box red-square"></div>
+
+      <div class="square black-square" id="a5" nextValidSquare="['b6', 'b4']">
+        
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="c5" nextValidSquare="['b4', 'b6', 'd6', 'd4']">
+        
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="e5" nextValidSquare="['d4', 'd6', 'f6', 'f4']">
+        
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="g5" nextValidSquare="['f4', 'f6', 'h6', 'h4']">
+        
+      </div>
+
+      <div class="square red-square"></div>
+
     </div>
     <!--4th row -->
     <div class="row">
-      <div class="box red-square"></div>
-      <div class="box black-square" id="b4" nextValidSquare="['a3', 'a5', 'c5', 'c3']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="d4" nextValidSquare="['c3', 'c5', 'e5', 'e3']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="f4" nextValidSquare="['e3', 'e5', 'g5', 'g3']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="h4" nextValidSquare="['g3', 'g5']"></div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="b4" nextValidSquare="['a3', 'a5', 'c5', 'c3']">
+        
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="d4" nextValidSquare="['c3', 'c5', 'e5', 'e3']">
+        
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="f4" nextValidSquare="['e3', 'e5', 'g5', 'g3']">
+        
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="h4" nextValidSquare="['g3', 'g5']">
+        
+      </div>
+
     </div>
     <!--3rd row -->
     <div class="row">
-      <div class="box black-square" id="a3" nextValidSquare="['b4', 'b2']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="c3" nextValidSquare="['b2', 'b4', 'd4', 'd2']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="e3" nextValidSquare="['d2', 'd4', 'f4', 'f2']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="g3" nextValidSquare="['f2', 'f4', 'h4', 'h2']"></div>
-      <div class="box red-square"></div>
+
+      <div class="square black-square" id="a3" nextValidSquare="['b4', 'b2']">
+        <div class="chip black" :id="player1.chips[8].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="c3" nextValidSquare="['b2', 'b4', 'd4', 'd2']">
+        <div class="chip black" :id="player1.chips[9].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="e3" nextValidSquare="['d2', 'd4', 'f4', 'f2']">
+        <div class="chip black" :id="player1.chips[10].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="g3" nextValidSquare="['f2', 'f4', 'h4', 'h2']">
+        <div class="chip black" :id="player1.chips[11].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
     </div>
     <!--2nd row -->
     <div class="row">
-      <div class="box red-square"></div>
-      <div class="box black-square" id="b2" nextValidSquare="['a1', 'a3', 'c3', 'c1']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="d2" nextValidSquare="['c1', 'c3', 'e3', 'e1']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="f2" nextValidSquare="['e1', 'e3', 'h3', 'h1']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="h2" nextValidSquare="['g1', 'g3']"></div>
+      
+      <div class="square red-square"></div>
+      
+      <div class="square black-square" id="b2" nextValidSquare="['a1', 'a3', 'c3', 'c1']">
+        <div class="chip black" :id="player1.chips[4].chipId"></div>
+      </div>
+      
+      <div class="square red-square"></div>
+      
+      <div class="square black-square" id="d2" nextValidSquare="['c1', 'c3', 'e3', 'e1']">
+        <div class="chip black" :id="player1.chips[5].chipId"></div>
+      </div>
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="f2" nextValidSquare="['e1', 'e3', 'h3', 'h1']">
+        <div class="chip black" :id="player1.chips[6].chipId"></div>
+      </div>
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="h2" nextValidSquare="['g1', 'g3']">
+        <div class="chip black" :id="player1.chips[7].chipId"></div>
+      </div>
+
     </div>
     <!--1st row -->
     <div class="row">
-      <div class="box black-square" id="a1" nextValidSquare="['b2']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="c1" nextValidSquare="['b2', 'd2']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="e1" nextValidSquare="['d2', 'f2']"></div>
-      <div class="box red-square"></div>
-      <div class="box black-square" id="g1" nextValidSquare="['f2', 'h2']"></div>
-      <div class="box red-square"></div>
+
+      <div class="square black-square" id="a1" nextValidSquare="['b2']">
+        <div class="chip black" :id="player1.chips[0].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="c1" nextValidSquare="['b2', 'd2']">
+        <div class="chip black" :id="player1.chips[1].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="e1" nextValidSquare="['d2', 'f2']">
+        <div class="chip black" :id="player1.chips[2].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
+
+      <div class="square black-square" id="g1" nextValidSquare="['f2', 'h2']">
+        <div class="chip black" :id="player1.chips[3].chipId"></div>
+      </div>
+
+      <div class="square red-square"></div>
     </div>
   </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#game',
+      // data: chips :: when the chips_state.json can be imported, we can store it in a variable, such as `chips`, but for this part I will hardcode the data...
+      data: {
 
+        player1 : {
+
+          name: "Michele",
+
+          color: "black",
+
+          chips : [
+
+            {
+              chipId : "black-1",
+              defaultSquare : "a1",
+              currentSquare : "a1",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-2",
+              defaultSquare : "c1",
+              currentSquare : "c1",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-3",
+              defaultSquare : "e1",
+              currentSquare : "e1",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-4",
+              defaultSquare : "g1",
+              currentSquare : "g1",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-5",
+              defaultSquare : "b2",
+              currentSquare : "b2",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-6",
+              defaultSquare : "d2",
+              currentSquare : "d2",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-7",
+              defaultSquare : "f2",
+              currentSquare : "f2",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-8",
+              defaultSquare : "h2",
+              currentSquare : "h2",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-9",
+              defaultSquare : "a3",
+              currentSquare : "a3",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-10",
+              defaultSquare : "c3",
+              currentSquare : "c3",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-11",
+              defaultSquare : "e3",
+              currentSquare : "e3",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "black-12",
+              defaultSquare : "g3",
+              currentSquare : "g3",
+              isKing : false,
+              isCaptured : false
+            }
+
+          ]
+      },
+
+        player2 : {
+
+          name: "Susanna",
+
+          color: "red",
+
+          chips : [
+
+            {
+              chipId : "red-1",
+              defaultSquare : "b8",
+              currentSquare : "b8",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-2",
+              defaultSquare : "d8",
+              currentSquare : "d8",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-3",
+              defaultSquare : "f8",
+              currentSquare : "f8",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-4",
+              defaultSquare : "h8",
+              currentSquare : "h8",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-5",
+              defaultSquare : "a7",
+              currentSquare : "a7",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-6",
+              defaultSquare : "c7",
+              currentSquare : "c7",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-7",
+              defaultSquare : "e7",
+              currentSquare : "e7",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-8",
+              defaultSquare : "g7",
+              currentSquare : "g7",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-9",
+              defaultSquare : "b6",
+              currentSquare : "b6",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-10",
+              defaultSquare : "d6",
+              currentSquare : "d6",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-11",
+              defaultSquare : "f6",
+              currentSquare : "f6",
+              isKing : false,
+              isCaptured : false
+            },
+
+            {
+              chipId : "red-12",
+              defaultSquare : "h6",
+              currentSquare : "h6",
+              isKing : false,
+              isCaptured : false
+            }
+
+          ]
+
+        }
+
+      }
+    })
+
+  </script>
+  <script src="js/chips.js"></script>
 </body>
