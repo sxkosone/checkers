@@ -33,8 +33,8 @@
 .red-square { background: red; }
 .black-square { background: black; }
 
-/*Red and black pieces. Piece is the flex item for box*/
-.piece {
+/*Red and black chips. Chip is the flex item for box*/
+.chip {
   flex: 1 1 0px;
   border-radius: 100%;
   margin: 5px;

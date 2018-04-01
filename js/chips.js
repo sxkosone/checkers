@@ -34,3 +34,6 @@ function isEnemyChip(selectedChip, evalChip) {
 	// return a boolean
 }
 
+// init functions
+const chips = document.querySelectorAll('.chip');
+console.log(chips);
