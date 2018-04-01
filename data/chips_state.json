@@ -1,7 +1,3 @@
-// This data can be used to render and manage the state of the chips on the board
-
-// This data relies on the matched-naming of spaces on the checkers board
-
 {
 
   "player1" : {
@@ -14,96 +10,96 @@
 
       {
         "chipId" : "black-1",
-        "defaultSpace" : "a1",
-        "currentSpace" : "a1",
+        "defaultSquare" : "a1",
+        "currentSquare" : "a1",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-2",
-        "defaultSpace" : "c1",
-        "currentSpace" : "c1",
+        "defaultSquare" : "c1",
+        "currentSquare" : "c1",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-3",
-        "defaultSpace" : "e1",
-        "currentSpace" : "e1",
+        "defaultSquare" : "e1",
+        "currentSquare" : "e1",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-4",
-        "defaultSpace" : "g1",
-        "currentSpace" : "g1",
+        "defaultSquare" : "g1",
+        "currentSquare" : "g1",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-5",
-        "defaultSpace" : "b2",
-        "currentSpace" : "b2",
+        "defaultSquare" : "b2",
+        "currentSquare" : "b2",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-6",
-        "defaultSpace" : "d2",
-        "currentSpace" : "d2",
+        "defaultSquare" : "d2",
+        "currentSquare" : "d2",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-7",
-        "defaultSpace" : "f2",
-        "currentSpace" : "f2",
+        "defaultSquare" : "f2",
+        "currentSquare" : "f2",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-8",
-        "defaultSpace" : "h2",
-        "currentSpace" : "h2",
+        "defaultSquare" : "h2",
+        "currentSquare" : "h2",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-9",
-        "defaultSpace" : "a3",
-        "currentSpace" : "a3",
+        "defaultSquare" : "a3",
+        "currentSquare" : "a3",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-10",
-        "defaultSpace" : "c3",
-        "currentSpace" : "c3",
+        "defaultSquare" : "c3",
+        "currentSquare" : "c3",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-11",
-        "defaultSpace" : "e3",
-        "currentSpace" : "e3",
+        "defaultSquare" : "e3",
+        "currentSquare" : "e3",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "black-12",
-        "defaultSpace" : "g3",
-        "currentSpace" : "g3",
+        "defaultSquare" : "g3",
+        "currentSquare" : "g3",
         "isKing" : false,
         "isCaptured" : false
       }
@@ -121,96 +117,96 @@
 
       {
         "chipId" : "red-1",
-        "defaultSpace" : "b8",
-        "currentSpace" : "b8",
+        "defaultSquare" : "b8",
+        "currentSquare" : "b8",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-2",
-        "defaultSpace" : "d8",
-        "currentSpace" : "d8",
+        "defaultSquare" : "d8",
+        "currentSquare" : "d8",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-3",
-        "defaultSpace" : "f8",
-        "currentSpace" : "f8",
+        "defaultSquare" : "f8",
+        "currentSquare" : "f8",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-4",
-        "defaultSpace" : "h8",
-        "currentSpace" : "h8",
+        "defaultSquare" : "h8",
+        "currentSquare" : "h8",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-5",
-        "defaultSpace" : "a7",
-        "currentSpace" : "a7",
+        "defaultSquare" : "a7",
+        "currentSquare" : "a7",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-6",
-        "defaultSpace" : "c7",
-        "currentSpace" : "c7",
+        "defaultSquare" : "c7",
+        "currentSquare" : "c7",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-7",
-        "defaultSpace" : "e7",
-        "currentSpace" : "e7",
+        "defaultSquare" : "e7",
+        "currentSquare" : "e7",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-8",
-        "defaultSpace" : "g7",
-        "currentSpace" : "g7",
+        "defaultSquare" : "g7",
+        "currentSquare" : "g7",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-9",
-        "defaultSpace" : "b6",
-        "currentSpace" : "b6",
+        "defaultSquare" : "b6",
+        "currentSquare" : "b6",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-10",
-        "defaultSpace" : "d6",
-        "currentSpace" : "d6",
+        "defaultSquare" : "d6",
+        "currentSquare" : "d6",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-11",
-        "defaultSpace" : "f6",
-        "currentSpace" : "f6",
+        "defaultSquare" : "f6",
+        "currentSquare" : "f6",
         "isKing" : false,
         "isCaptured" : false
       },
 
       {
         "chipId" : "red-12",
-        "defaultSpace" : "h6",
-        "currentSpace" : "h6",
+        "defaultSquare" : "h6",
+        "currentSquare" : "h6",
         "isKing" : false,
         "isCaptured" : false
       }
