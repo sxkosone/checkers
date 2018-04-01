@@ -4,8 +4,8 @@ function selectChip() {
 	// things that happen when a user clicks-on a chip on the board:
 	// - get the ID of the selected chip
 	// - highlight the chip in the UI so the user can see it's selected
-	// - get the ID of the current space/square/box that the selected chip is in
-	// - check the surrounding spaces for available valid moves
+	// - get the ID of the current square that the selected chip is in
+	// - check the surrounding squares for available valid moves
 	// - call the validateMoves function, pass the selected chip and the current square as arguments. 
 	//   might also need to pass-in the player or player's chip color
 	// validateMoves(selectedChip, currentSquare); 

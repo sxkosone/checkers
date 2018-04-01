@@ -15,15 +15,15 @@
 }
 
 /*Default styles for all squares to be square shape accross different widths*/
-/*Box is both a flex item and a flex container*/
-.box {
+/*Square is both a flex item and a flex container*/
+.square {
   flex: 1 0 0px;
   height: auto;
   display: flex;
 }
 
-/*Pseudo element to make box height responsive to width*/
-.box:before {
+/*Pseudo element to make square height responsive to width*/
+.square:before {
   content:'';
   float:left;
   padding-top:100%;
@@ -33,7 +33,7 @@
 .red-square { background: red; }
 .black-square { background: black; }
 
-/*Red and black chips. Chip is the flex item for box*/
+/*Red and black chips. Chip is the flex item for square*/
 .chip {
   flex: 1 1 0px;
   border-radius: 100%;
