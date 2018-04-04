@@ -54,20 +54,22 @@ function isEnemyChip(selectedChip, evalChip) {
 
 function userClick(element) {
 	//takes a parameter of e.target, all of the elements on the page
+	
 	//if element is chip...
 	if (element.hasClass('chip')) {
+
 		//check if chip already selected
-		if {
-			element.hasClass('.selected') {
+		if (element.hasClass('.selected')) {
 				clearSelection();
-			}
+
 			//check if it's your own chip, NOT an enemyChip
 		} else if (!isEnemyChip(element, evalChip)) {
+			
 			//select that chip
 			selectChip(element);
 		}
 		//if element is square
-	} else if (element.hasClass('square')){
+	} else if (element.hasClass('square')) {
 		//if square is within an array of valid moves for the last .selected chip!
 		//then make move: update state/location of chip, run the right animation
 		//else
