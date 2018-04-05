@@ -45,7 +45,9 @@
   cursor: pointer;
 }
 .chip.selected {
-  border: 2px solid yellow;
+  box-shadow: 0px 1px 5px turquoise;
+  /*added effect of chip rising up*/
+  transform: scale(1.1);
 }
 
 .red {
