@@ -4,7 +4,7 @@ function selectChip(chip) {
 
 	// Only one chip should be selected at any time, so if the selectedChip variable is truthy, we should clear that.
 	if(selectedChip) {
-		clearSelection(selectedChip);
+		clearSelection();
 	}
 	// things that happen when a user clicks-on a chip on the board:
 	// - get the element of the selected chip
@@ -123,7 +123,7 @@ function userClick(element) {
 	} else {
 
 		if(selectedChip) {
-			clearSelection(selectedChip);
+			clearSelection();
 		}
 
 	}
