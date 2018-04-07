@@ -1,9 +1,11 @@
-// some mock functions
+var selectedChip; // creates a global variable to track the selectedChip element without requiring looping through the DOM for classes
 
 function selectChip(chip) {
-	// make sure any other selected chip on the board is unselected.
-	// Only one chip should be selected at any time.
-	clearSelection();
+
+	// Only one chip should be selected at any time, so if the selectedChip variable is truthy, we should clear that.
+	if(selectedChip) {
+		clearSelection(selectedChip);
+	}
 	// things that happen when a user clicks-on a chip on the board:
 	// - get the element of the selected chip
 	console.log(chip); // `chip` is the variable that represents the DOM element of the chip that was clicked
@@ -11,6 +13,10 @@ function selectChip(chip) {
 	// - highlight the chip in the UI so the user can see it's selected
 	chip.classList.add('selected'); // add a class, `selected`, which should provide a highlight via CSS
 
+	selectedChip = chip; // set the newly-clicked chip to be the global selectedChip
+
+	return selectedChip; // return the freshly-set selectedChip variable back to the global scope
+	
 	// - get the ID of the current square that the selected chip is in
 	// - check the surrounding squares for available valid moves
 	// - call the validateMoves function, pass the selected chip and the current square as arguments.
@@ -19,67 +25,112 @@ function selectChip(chip) {
 }
 
 function clearSelection() {
-	const selectedChip = document.querySelectorAll('.selected'); // check the DOM for elements with a `selected` class
-	if (selectedChip) { // if there are any instances of the `selected` class...
-		for (var i = 0, len = selectedChip.length; i < len; i++) { // loop through them...
-			selectedChip[i].classList.remove('selected'); // and remove the `selected` class
-		}
-	} else {
-		return;
-	}
+		selectedChip.classList.remove('selected'); // remove the `selected` class
+		selectedChip = undefined; // set the global variable back to undefined
+		return selectedChip; // return the undefined variable back to the global scope
 }
 
-function validateMoves(selectedChip, currentSquare) {
+function validateMoves(currentSquare) {
 	// things to check to find out what the available moves are for the selected chip:
 	// - get the array of nextValidSquares from the square's markup (or encapsulate that data into another object somewhere?)
-	// - check each of the nextValidQuares for empty squares or enemy chips/friendly chips using the squareContains function
+	// - check each of the nextValidQuares for empty squares or enemy chips/friendly chips using the evalSquare function
 	// - create an array of available empty valid squares that the chip can move to
 	// - create an array of valid squares that contain enemy chips
 	// - when a valid square contains an enemy chip, check for available capture
 	// - if a capture is available, create an array of valid squares to *jump-to* that would *capture* an enemy chip
 }
 
-function squareContains(selectedChip) {
-	// decide if a valid square is empty.
-	// if not empty, decide if the square contains a chip
-	// if the square contains a chip, find out if it is an enemy chip!
-	// isEnemyChip(selectedChip, evalChip)
-	// return possible values: "emptySquare", "friendlyChip", "enemyChip"
+function evalSquare(selectedSquare) {
+
+	// if the clicked square is the parent of the selectedChip, do nothing.
+	if (selectedSquare.children[0] == selectedChip) {
+		return false; 
+	}
+
+	var squareHas;
+
+	if (selectedSquare.children.length === 0) {
+		squareHas = "emptySquare";
+	} else if (isEnemyChip(selectedSquare.children[0])) {
+		squareHas = "enemyChip";
+	} else {
+		squareHas = "friendlyChip";
+	}
+	
+	return squareHas;
+
 }
 
-function isEnemyChip(selectedChip, evalChip) {
-	// check the selectedChip's color and test it against another chip, `evalChip` to decide if it is an enemy chip.
-	// return a boolean
+function isEnemyChip(evalChip) {
+	if (!selectedChip) {
+		return false;
+	}
+
+	var chipColor;
+	var evalChipColor;
+	
+	if (selectedChip.classList.contains("red")) {
+		chipColor = "red";
+	} else {
+		chipColor = "black";
+	}
+
+	if (evalChip.classList.contains("red")) {
+		evalChipColor = "red";
+	} else {
+		evalChipColor = "black";
+	}
+	
+	if (chipColor === evalChipColor) {
+		return false;
+	} else {
+		return true;
+	}
 }
 
 function userClick(element) {
 	//takes a parameter of e.target, any clicked element on the page
 
+	// if the clicked element is also the selectedChip, do nothing.
+	if (element == selectedChip) {
+		// this condition will execute first and the return false here will ensure that the remainder 
+		// of the userClick() function does not execute.
+		return false; 
+	}
+
 	//if element is chip...
 	if (element.classList.contains('chip')) {
-
-		//check if chip already selected
-		if (element.classList.contains('selected')) {
-				clearSelection();
+			//select that chip
+			selectChip(element);
 
 			//check if it's your own chip, NOT an enemyChip
 			// else if (!isEnemyChip(element, evalChip))
 			//this step commented out for testing purposes. Game will select any chip.
-		} else {
-			//select that chip
-			selectChip(element);
-		}
+		
 		//if element is square
-	} else if (element.classList.contains('square')) {
+	} else if (element.classList.contains('red-square')) {
+			console.log("that's a red square!");
+			
 		//if square is within an array of valid moves for the last .selected chip!
 		//then make move: update state/location of chip, run the right animation
 		//else
 		//then perhaps alert user: "not a valid move"?
 		//if element is not a square, nor a chip = it's outside the board, clear the selection
+	} else if (element.classList.contains('black-square')) {
+		var squareHas = evalSquare(element);
+		console.log("that's a black square!");
+		console.log("squareHas = "+squareHas);
 	} else {
-		clearSelection();
+
+		if(selectedChip) {
+			clearSelection(selectedChip);
+		}
+
 	}
 }
+
+
+
 // init functions
 
 //add an event listener to all DOM elements
