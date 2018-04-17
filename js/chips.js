@@ -149,9 +149,10 @@ function userClick(element) {
 	} else if (element.classList.contains('red-square')) {
 
 		console.log("that's a red square!");
-		selectSquare(element);
-		var squareHas = evalSquare(element);
-		console.log("squareHas = "+squareHas);
+		
+		if (selectedSquare) {
+			clearSquare();
+		}
 
 		//if square is within an array of valid moves for the last .selected chip!
 		//then make move: update state/location of chip, run the right animation
