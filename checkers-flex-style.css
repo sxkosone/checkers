@@ -15,15 +15,15 @@
 }
 
 /*Default styles for all squares to be square shape accross different widths*/
-/*Box is both a flex item and a flex container*/
-.box {
+/*Square is both a flex item and a flex container*/
+.square {
   flex: 1 0 0px;
   height: auto;
   display: flex;
 }
 
-/*Pseudo element to make box height responsive to width*/
-.box:before {
+/*Pseudo element to make square height responsive to width*/
+.square:before {
   content:'';
   float:left;
   padding-top:100%;
@@ -33,13 +33,23 @@
 .red-square { background: red; }
 .black-square { background: black; }
 
-/*Red and black pieces. Piece is the flex item for box*/
-.piece {
+/*Red and black chips. Chip is the flex item for square*/
+.chip {
   flex: 1 1 0px;
   border-radius: 100%;
   margin: 5px;
   align-content: center;
 }
+/* make the non-captured chips appear clickable to the user */
+.chip:not([isCaptured]) {
+  cursor: pointer;
+}
+.chip.selected {
+  box-shadow: 0px 0px 5px 5px lightyellow;
+  /*added effect of chip rising up*/
+  transform: scale(1.05);
+}
+
 .red {
   background: linear-gradient(#ff3535, #8e0101) ;
   border: 1px solid black;
