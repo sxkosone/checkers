@@ -1,4 +1,5 @@
 var selectedChip; // creates a global variable to track the selectedChip element without requiring looping through the DOM for classes
+var selectedSquare; //a global variable to track the selectedSquare element
 
 function selectChip(chip) {
 
@@ -16,7 +17,7 @@ function selectChip(chip) {
 	selectedChip = chip; // set the newly-clicked chip to be the global selectedChip
 
 	return selectedChip; // return the freshly-set selectedChip variable back to the global scope
-	
+
 	// - get the ID of the current square that the selected chip is in
 	// - check the surrounding squares for available valid moves
 	// - call the validateMoves function, pass the selected chip and the current square as arguments.
@@ -24,10 +25,39 @@ function selectChip(chip) {
 	// validateMoves(selectedChip, currentSquare);
 }
 
+function selectSquare(square) {
+	//you can select a square only if you've already selected a chip
+	if (selectedChip) {
+		//only one square can be selected at a time. If one square already selected, clear previous selection.
+		if (selectedSquare) {
+			clearSquare();
+		}
+		//testing: log that square has been selected
+		console.log("Function selectSquare will select this " + square.classList[1])
+		//add class selected and some styling to the selected square
+		square.classList.add('selected');
+		//set the newly-clicked square to be the global variable of selectedSquare
+		selectedSquare = square;
+		//return the new selected square
+		return selectedSquare;
+	} else {
+		console.log("Choose a chip first!")
+		return false;
+	}
+}
+
+
 function clearSelection() {
-		selectedChip.classList.remove('selected'); // remove the `selected` class
-		selectedChip = undefined; // set the global variable back to undefined
-		return selectedChip; // return the undefined variable back to the global scope
+	selectedChip.classList.remove('selected'); // remove the `selected` class
+	selectedChip = undefined; // set the global variable back to undefined
+	return selectedChip; // return the undefined variable back to the global scope
+}
+
+function clearSquare() {
+	//this function does same as clearSelection() but for squares
+	selectedSquare.classList.remove('selected');
+	selectedSquare = undefined;
+	return selectedSquare;
 }
 
 function validateMoves(currentSquare) {
@@ -40,26 +70,33 @@ function validateMoves(currentSquare) {
 	// - if a capture is available, create an array of valid squares to *jump-to* that would *capture* an enemy chip
 }
 
-function evalSquare(selectedSquare) {
+function evalSquare() {
 
-	// if the clicked square is the parent of the selectedChip, do nothing.
-	if (selectedSquare.children[0] == selectedChip) {
-		return false; 
-	}
+	//only run this function if a square is selected. Will not work if global var selectedSquare is undefined
+	if (selectedSquare) {
+		// if the clicked square is the parent of the selectedChip, do nothing.
+		if (selectedSquare.children[0] == selectedChip) {
+			console.log("you've selected your current square!")
+			return false;
+		}
 
-	var squareHas;
+		var squareHas;
 
-	if (selectedSquare.children.length === 0) {
-		squareHas = "emptySquare";
-	} else if (isEnemyChip(selectedSquare.children[0])) {
-		squareHas = "enemyChip";
+		if (selectedSquare.children.length === 0) {
+			squareHas = "emptySquare";
+		} else if (isEnemyChip(selectedSquare.children[0])) {
+			squareHas = "enemyChip";
+		} else {
+			squareHas = "friendlyChip";
+		}
+
+		return squareHas;
+
 	} else {
-		squareHas = "friendlyChip";
+		return false;
 	}
-	
-	return squareHas;
-
 }
+
 
 function isEnemyChip(evalChip) {
 	if (!selectedChip) {
@@ -68,7 +105,7 @@ function isEnemyChip(evalChip) {
 
 	var chipColor;
 	var evalChipColor;
-	
+
 	if (selectedChip.classList.contains("red")) {
 		chipColor = "red";
 	} else {
@@ -80,7 +117,7 @@ function isEnemyChip(evalChip) {
 	} else {
 		evalChipColor = "black";
 	}
-	
+
 	if (chipColor === evalChipColor) {
 		return false;
 	} else {
@@ -92,38 +129,50 @@ function userClick(element) {
 	//takes a parameter of e.target, any clicked element on the page
 
 	// if the clicked element is also the selectedChip, do nothing.
-	if (element == selectedChip) {
-		// this condition will execute first and the return false here will ensure that the remainder 
+	// or if the clicked element is the selectedSquare, do nothing. This might change, if we want to display a message to the user.
+	if (element == selectedChip || element == selectedSquare) {
+		// this condition will execute first and the return false here will ensure that the remainder
 		// of the userClick() function does not execute.
-		return false; 
+		return false;
 	}
 
 	//if element is chip...
 	if (element.classList.contains('chip')) {
-			//select that chip
-			selectChip(element);
+		//select that chip
+		selectChip(element);
 
-			//check if it's your own chip, NOT an enemyChip
-			// else if (!isEnemyChip(element, evalChip))
-			//this step commented out for testing purposes. Game will select any chip.
-		
+		//check if it's your own chip, NOT an enemyChip
+		// else if (!isEnemyChip(element, evalChip))
+		//this step commented out for testing purposes. Game will select any chip.
+
 		//if element is square
 	} else if (element.classList.contains('red-square')) {
-			console.log("that's a red square!");
-			
+
+		console.log("that's a red square!");
+		
+		if (selectedSquare) {
+			clearSquare();
+		}
+
 		//if square is within an array of valid moves for the last .selected chip!
 		//then make move: update state/location of chip, run the right animation
 		//else
 		//then perhaps alert user: "not a valid move"?
-		//if element is not a square, nor a chip = it's outside the board, clear the selection
-	} else if (element.classList.contains('black-square')) {
-		var squareHas = evalSquare(element);
-		console.log("that's a black square!");
-		console.log("squareHas = "+squareHas);
-	} else {
 
+	} else if (element.classList.contains('black-square')) {
+
+		console.log("that's a black square!");
+		selectSquare(element);
+		var squareHas = evalSquare(element);
+		console.log("squareHas = "+squareHas);
+
+
+		//if element is not a square, nor a chip = it's outside the board
+	} else {
+		//if a chip or square were selected, clear the selections
 		if(selectedChip) {
 			clearSelection();
+			clearSquare();
 		}
 
 	}
