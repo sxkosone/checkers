@@ -33,6 +33,11 @@
 .red-square { background: red; }
 .black-square { background: black; }
 
+/*styling for selected square while testing and developing*/
+.square.selected {
+  box-shadow: inset 1px 1px 20px springgreen;
+}
+
 /*Red and black chips. Chip is the flex item for square*/
 .chip {
   flex: 1 1 0px;
