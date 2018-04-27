@@ -35,7 +35,7 @@
 
 /*styling for selected square while testing and developing*/
 .square.selected {
-  box-shadow: inset 1px 1px 20px springgreen;
+  box-shadow: inset 1px 1px 50px springgreen;
 }
 
 /*Red and black chips. Chip is the flex item for square*/
@@ -51,8 +51,16 @@
 }
 .chip.selected {
   box-shadow: 0px 0px 5px 5px lightyellow;
-  /*added effect of chip rising up*/
-  transform: scale(1.05);
+  /*animation for selected chips start-state*/
+  transition: transform 0.8s ease-out;
+}
+/*Animate selected chips that are clicked again*/
+.chip.selected:active {
+  border: 4px solid yellow;
+  transform: translate(118.5%, -118.5%);
+  /*effect of chip rising up*/
+  /*transform: scale(1.05);*/
+
 }
 
 .red {
