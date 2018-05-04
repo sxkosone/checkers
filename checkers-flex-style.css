@@ -55,12 +55,11 @@
   transition: transform 0.8s ease-out;
 }
 /*Animate selected chips that are clicked again*/
-.chip.selected:active {
-  border: 4px solid yellow;
+.chip.moveNE {
   transform: translate(118.5%, -118.5%);
-  /*effect of chip rising up*/
-  /*transform: scale(1.05);*/
-
+}
+.chip.disappear {
+  visibility: none;
 }
 
 .red {
@@ -76,6 +75,6 @@
 /*Max width for desktop screens only*/
 @media all and (min-width: 696px) {
   .wrapper {
-    max-width: 640px;
+    max-width: 660px;
   }
 }

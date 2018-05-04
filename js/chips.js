@@ -38,6 +38,8 @@ function selectSquare(square) {
 		square.classList.add('selected');
 		//set the newly-clicked square to be the global variable of selectedSquare
 		selectedSquare = square;
+		//move your selected chip. In the future this will function will probably be called in validateMoves(), not here!
+		moveChip();
 		//return the new selected square
 		return selectedSquare;
 	} else {
@@ -45,6 +47,18 @@ function selectSquare(square) {
 		return false;
 	}
 }
+
+function moveChip() {
+	//This function will currently only move chip one step up and right (moveNE).
+	selectedChip.classList.add('moveNE');
+		//Wait for the animation to complete before clearing both chip and square
+		setTimeout(function () {
+			clearSquare(); //remove square selection
+			selectedChip.classList.add('disappear');
+			selectedChip.classList.remove('moveNE'); //remove moveNE class
+			clearSelection(); //remove chip selection
+		}, 1200);
+	}
 
 
 function clearSelection() {
