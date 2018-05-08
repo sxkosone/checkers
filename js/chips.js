@@ -1,5 +1,6 @@
 var selectedChip; // creates a global variable to track the selectedChip element without requiring looping through the DOM for classes
 var selectedSquare; //a global variable to track the selectedSquare element
+var currentSquare; //should there be a global var for currentSquare?
 
 function selectChip(chip) {
 
@@ -26,30 +27,22 @@ function selectChip(chip) {
 }
 
 function selectSquare(square) {
-	//you can select a square only if you've already selected a chip
-	if (selectedChip) {
-		//only one square can be selected at a time. If one square already selected, clear previous selection.
-		if (selectedSquare) {
-			clearSquare();
-		}
-		//testing: log that square has been selected
-		console.log("Function selectSquare will select this " + square.classList[1])
-		//add class selected and some styling to the selected square
-		square.classList.add('selected');
-		//set the newly-clicked square to be the global variable of selectedSquare
-		selectedSquare = square;
-		//move your selected chip. In the future this will function will probably be called in validateMoves(), not here!
-		moveChip();
-		//return the new selected square
-		return selectedSquare;
-	} else {
-		console.log("Choose a chip first!")
-		return false;
-	}
+	
+	//only one square can be selected at a time. If one square already selected, clear previous selection.
+	if (selectedSquare) {
+		clearSquare();
+	}		
+	//add class selected and some styling to the selected square
+	square.classList.add('selected');
+	//set the newly-clicked square to be the global variable of selectedSquare
+	selectedSquare = square;	
+	//return the new selected square
+	return selectedSquare;	
 }
 
 function moveChip() {
 	//This function will currently only move chip one step up and right (moveNE).
+	
 	selectedChip.classList.add('moveNE');
 		//Wait for the animation to complete before clearing both chip and square
 		setTimeout(function () {
@@ -58,10 +51,12 @@ function moveChip() {
 			selectedChip.classList.remove('moveNE'); //remove moveNE class
 			clearSelection(); //remove chip selection
 		}, 1200);
+		
 	}
 
 
 function clearSelection() {
+
 	selectedChip.classList.remove('selected'); // remove the `selected` class
 	selectedChip = undefined; // set the global variable back to undefined
 	return selectedChip; // return the undefined variable back to the global scope
@@ -77,6 +72,7 @@ function clearSquare() {
 function validateMoves(currentSquare) {
 	// things to check to find out what the available moves are for the selected chip:
 	// - get the array of nextValidSquares from the square's markup (or encapsulate that data into another object somewhere?)
+
 	// - check each of the nextValidQuares for empty squares or enemy chips/friendly chips using the evalSquare function
 	// - create an array of available empty valid squares that the chip can move to
 	// - create an array of valid squares that contain enemy chips
@@ -84,21 +80,13 @@ function validateMoves(currentSquare) {
 	// - if a capture is available, create an array of valid squares to *jump-to* that would *capture* an enemy chip
 }
 
-function evalSquare() {
-
-	//only run this function if a square is selected. Will not work if global var selectedSquare is undefined
-	if (selectedSquare) {
-		// if the clicked square is the parent of the selectedChip, do nothing.
-		if (selectedSquare.children[0] == selectedChip) {
-			console.log("you've selected your current square!")
-			return false;
-		}
+function evalSquare(square) {
 
 		var squareHas;
 
-		if (selectedSquare.children.length === 0) {
+		if (square.children.length === 0) {
 			squareHas = "emptySquare";
-		} else if (isEnemyChip(selectedSquare.children[0])) {
+		} else if (isEnemyChip(square.children[0])) {
 			squareHas = "enemyChip";
 		} else {
 			squareHas = "friendlyChip";
@@ -106,11 +94,16 @@ function evalSquare() {
 
 		return squareHas;
 
+	} 
+
+//check if a square is current square
+function isCurrentSquare(square) {
+	if (square.children[0] == selectedChip) {
+		return true;
 	} else {
 		return false;
 	}
 }
-
 
 function isEnemyChip(evalChip) {
 	if (!selectedChip) {
@@ -162,11 +155,7 @@ function userClick(element) {
 		//if element is square
 	} else if (element.classList.contains('red-square')) {
 
-		console.log("that's a red square!");
-		
-		if (selectedSquare) {
-			clearSquare();
-		}
+		console.log("User notification: You can't select red squares, only black ones!");
 
 		//if square is within an array of valid moves for the last .selected chip!
 		//then make move: update state/location of chip, run the right animation
@@ -174,11 +163,21 @@ function userClick(element) {
 		//then perhaps alert user: "not a valid move"?
 
 	} else if (element.classList.contains('black-square')) {
-
 		console.log("that's a black square!");
-		selectSquare(element);
-		var squareHas = evalSquare(element);
+		//you can select a square only if you've already selected a chip and if it's not your own square
+		if (selectedChip && !isCurrentSquare(element)) {
+			//need to add condition to ONLY select empty squares
+			selectSquare(element);	
+			var squareHas = evalSquare(element);
 		console.log("squareHas = "+squareHas);
+		//move your selected chip. Should this function be called here?
+		moveChip();
+		} else {
+			console.log("Choose a chip first!, or you've choosen your own square")
+			return false;
+		}
+		
+		
 
 
 		//if element is not a square, nor a chip = it's outside the board
