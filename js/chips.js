@@ -70,7 +70,7 @@ function clearSelection() {
 
 	selectedChip.classList.remove('selected'); // remove the `selected` class
 	selectedChip = undefined; // set the global variable back to undefined
-	currentSquare = undefined; //set the global variable back to undefined
+	//should I also set the global variable selectedSquare back to undefined?
 	return selectedChip; // return the undefined variable back to the global scope
 }
 
@@ -180,7 +180,7 @@ function userClick(element) {
 		//if element is not a square, nor a chip = it's outside the board
 	} else if(selectedChip) {
 			clearSelection();
-			clearSquare();
+			//clearSquare();
 	} else {
 		console.log("Invalid square selection!");
 		return false;

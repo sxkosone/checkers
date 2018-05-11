@@ -58,9 +58,6 @@
 .chip.moveNE {
   transform: translate(118.5%, -118.5%);
 }
-.chip.disappear {
-  visibility: none;
-}
 
 .red {
   background: linear-gradient(#ff3535, #8e0101) ;
