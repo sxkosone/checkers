@@ -20,7 +20,7 @@ function selectChip(chip) {
 	setCurrentSquare(); //set the parent square of new chip as global var currentSquare
 
 	return selectedChip; // return the freshly-set selectedChip variable back to the global scope
-	
+
 	// - check the surrounding squares for available valid moves
 	// - call the validateMoves function, pass the selected chip and the current square as arguments.
 	//   might also need to pass-in the player or player's chip color
@@ -37,17 +37,17 @@ function setCurrentSquare() {
 }
 
 function selectSquare(square) {
-	
+
 	//only one square can be selected at a time. If one square already selected, clear previous selection.
 	if (selectedSquare) {
 		clearSquare();
-	}		
+	}
 	//add class selected and some styling to the selected square
 	square.classList.add('selected');
 	//set the newly-clicked square to be the global variable of selectedSquare
-	selectedSquare = square;	
+	selectedSquare = square;
 	//return the new selected square
-	return selectedSquare;	
+	return selectedSquare;
 }
 
 function moveChip() {
@@ -58,12 +58,11 @@ function moveChip() {
 		//Wait for the animation to complete before clearing both chip and square
 		setTimeout(function () {
 			clearSquare(); //remove square selection
-			selectedChip.classList.add('disappear');
 			selectedChip.classList.remove('moveNE'); //remove moveNE class
 			clearSelection(); //remove chip selection
 			moveComplete = true;//enable clicking again
-		}, 1200);
-		
+		}, 1000);
+
 	}
 
 
@@ -107,7 +106,7 @@ function evalSquare(square) {
 
 		return squareHas;
 
-	} 
+	}
 
 function isEnemyChip(evalChip) {
 	if (!selectedChip) {
@@ -167,15 +166,15 @@ function userClick(element) {
 		//then perhaps alert user: "not a valid move"?
 
 	} else if (element.classList.contains('black-square')&&
-			selectedChip && 
-			element !== currentSquare && 
+			selectedChip &&
+			element !== currentSquare &&
 			evalSquare(element) === 'emptySquare') {
 			console.log("that's a black square!");
-		//you can select a square only if you've already selected a chip 
+		//you can select a square only if you've already selected a chip
 		//and if it's not your own square
 		//and if it's an empty square
-			
-			selectSquare(element);	
+
+			selectSquare(element);
 			//move your selected chip. Should this function be called here?
 			moveChip();
 		//if element is not a square, nor a chip = it's outside the board
