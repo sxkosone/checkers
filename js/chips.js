@@ -32,6 +32,7 @@ function setCurrentSquare() {
 	currentSquare = selectedChip.parentElement;
 	//testing
 	console.log(`The current square's id is: ${currentSquare.id}`);
+	//get currentSquare's available moves from HTML tag somehow
 	return currentSquare;
 }
 
@@ -158,7 +159,6 @@ function userClick(element) {
 
 		//if element is square
 	} else if (element.classList.contains('red-square')) {
-
 		console.log("User notification: You can't select red squares, only black ones!");
 
 		//if square is within an array of valid moves for the last .selected chip!
@@ -166,31 +166,25 @@ function userClick(element) {
 		//else
 		//then perhaps alert user: "not a valid move"?
 
-	} else if (element.classList.contains('black-square')) {
-		console.log("that's a black square!");
+	} else if (element.classList.contains('black-square')&&
+			selectedChip && 
+			element !== currentSquare && 
+			evalSquare(element) === 'emptySquare') {
+			console.log("that's a black square!");
 		//you can select a square only if you've already selected a chip 
 		//and if it's not your own square
-		//andn if it's an empty square
-		if (selectedChip && element !== currentSquare && evalSquare(element) === 'emptySquare') {
+		//and if it's an empty square
+			
 			selectSquare(element);	
-			var squareHas = evalSquare(element);
 			//move your selected chip. Should this function be called here?
 			moveChip();
-		} else {
-			console.log("Invalid square selection!");
-			return false;
-		}
-		
-		
-
-
 		//if element is not a square, nor a chip = it's outside the board
-	} else {
-		//if a chip or square were selected, clear the selections
-		if(selectedChip) {
+	} else if(selectedChip) {
 			clearSelection();
 			clearSquare();
-		}
+	} else {
+		console.log("Invalid square selection!");
+		return false;
 
 	}
 }
