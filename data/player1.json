@@ -1,0 +1,106 @@
+{
+
+  "name": "Michele",
+
+  "color": "black",
+
+  "chips" : [
+
+    {
+      "chipId" : "black-1",
+      "defaultSquare" : "a1",
+      "currentSquare" : "a1",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-2",
+      "defaultSquare" : "c1",
+      "currentSquare" : "c1",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-3",
+      "defaultSquare" : "e1",
+      "currentSquare" : "e1",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-4",
+      "defaultSquare" : "g1",
+      "currentSquare" : "g1",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-5",
+      "defaultSquare" : "b2",
+      "currentSquare" : "b2",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-6",
+      "defaultSquare" : "d2",
+      "currentSquare" : "d2",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-7",
+      "defaultSquare" : "f2",
+      "currentSquare" : "f2",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-8",
+      "defaultSquare" : "h2",
+      "currentSquare" : "h2",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-9",
+      "defaultSquare" : "a3",
+      "currentSquare" : "a3",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-10",
+      "defaultSquare" : "c3",
+      "currentSquare" : "c3",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-11",
+      "defaultSquare" : "e3",
+      "currentSquare" : "e3",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "black-12",
+      "defaultSquare" : "g3",
+      "currentSquare" : "g3",
+      "isKing" : false,
+      "isCaptured" : false
+    }
+
+  ]
+}
