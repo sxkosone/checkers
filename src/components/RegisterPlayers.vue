@@ -1,11 +1,17 @@
 <template>
   <div class="register-players">
     <form>
-      <label>What's your name, Player One?</label>
-      <input v-model="playerOne.name" />
-      <br /><br /><hr /><br />
-      <label>What's your name, Player Two?</label>
-      <input v-model="playerTwo.name" />
+      <fieldset>
+        <legend>Player One</legend>
+        <label>Name: <input v-model="playerOne.name" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Player Two</legend>
+        <label>Name: <input v-model="playerTwo.name" /></label>
+      </fieldset>
+      <div v-if="playerOne.name && playerTwo.name">
+        <button>Let's Play!</button>
+      </div>
     </form>
   </div>
 </template>
@@ -26,3 +32,23 @@ export default {
   }
 }
 </script>
+
+<style>
+  fieldset {
+    display: inline-flex;
+    border: 1px solid #cccccc;
+  }
+  legend {
+    font-weight: bold;
+  }
+  label, input {
+    display: inline;
+  }
+  button {
+    margin: 1em;
+    padding: 1em;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+  }
+</style>
