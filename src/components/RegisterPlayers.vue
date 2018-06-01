@@ -1,14 +1,16 @@
 <template>
   <div class="register-players">
     <form>
-      <fieldset>
-        <legend>Player One</legend>
-        <label>Name: <input v-model="playerOne.name" /></label>
-      </fieldset>
-      <fieldset>
-        <legend>Player Two</legend>
-        <label>Name: <input v-model="playerTwo.name" /></label>
-      </fieldset>
+      <div class="fieldset-wrap">
+        <fieldset>
+          <legend>Player One</legend>
+          <label>Name: <input v-model="playerOne.name" /></label>
+        </fieldset>
+        <fieldset>
+          <legend>Player Two</legend>
+          <label>Name: <input v-model="playerTwo.name" /></label>
+        </fieldset>
+      </div>
       <div v-if="playerOne.name && playerTwo.name">
         <button>Let's Play!</button>
       </div>
@@ -34,15 +36,23 @@ export default {
 </script>
 
 <style>
+  .fieldset-wrap {
+    display: flex;
+    justify-content: space-around;
+  }
   fieldset {
     display: inline-flex;
     border: 1px solid #cccccc;
+    flex-grow: 1;
+    padding-top: 0.8em;
+    padding-bottom: 1em;
   }
   legend {
     font-weight: bold;
   }
   label, input {
     display: inline;
+    font-size: 0.85em;
   }
   button {
     margin: 1em;
