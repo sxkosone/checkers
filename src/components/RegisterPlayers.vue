@@ -1,5 +1,5 @@
 <template>
-  <div class="register-players">
+  <div class="register-players" v-if="!gameStats.gameStart">
     <form>
       <div class="fieldset-wrap">
         <fieldset>
@@ -12,7 +12,7 @@
         </fieldset>
       </div>
       <div v-if="playerOne.name && playerTwo.name">
-        <button>Let's Play!</button>
+        <button @click="gameStats.gameStart = true">Let's Play!</button>
       </div>
     </form>
   </div>
@@ -21,15 +21,18 @@
 <script>
 import playerOne from './../../data/player1.json'
 import playerTwo from './../../data/player2.json'
+import gameStats from './../../data/gameStats.json'
 
-console.log('playerOne', playerOne)
-console.log('playerTwo', playerTwo)
+// console.log('playerOne', playerOne)
+// console.log('playerTwo', playerTwo)
+console.log('gameStats', gameStats)
 export default {
   name: 'RegisterPlayers',
   data () {
     return {
       playerOne: playerOne,
-      playerTwo: playerTwo
+      playerTwo: playerTwo,
+      gameStats: gameStats
     }
   }
 }
