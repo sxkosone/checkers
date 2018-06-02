@@ -2,6 +2,7 @@ var selectedChip; // creates a global variable to track the selectedChip element
 var selectedSquare; //a global variable to track the selectedSquare element
 var moveComplete = true; //boolean to check if animation is complete
 var currentSquare; //a global var for currentSquare
+var validMoves;
 
 function selectChip(chip) {
 
@@ -18,13 +19,15 @@ function selectChip(chip) {
 
 	selectedChip = chip; // set the newly-clicked chip to be the global selectedChip
 	setCurrentSquare(); //set the parent square of new chip as global var currentSquare
+	
+		// - check the surrounding squares for available valid moves
+		validMoves = currentSquare.dataset.nextValidSquare.split(", ");
+		// - call the validateMoves function, pass the selected chip and the current square as arguments.
+		//   might also need to pass-in the player or player's chip color
+		// validateMoves(selectedChip, currentSquare);
 
 	return selectedChip; // return the freshly-set selectedChip variable back to the global scope
 
-	// - check the surrounding squares for available valid moves
-	// - call the validateMoves function, pass the selected chip and the current square as arguments.
-	//   might also need to pass-in the player or player's chip color
-	// validateMoves(selectedChip, currentSquare);
 }
 
 function setCurrentSquare() {
@@ -32,7 +35,6 @@ function setCurrentSquare() {
 	currentSquare = selectedChip.parentElement;
 	//testing
 	console.log(`The current square's id is: ${currentSquare.id}`);
-	//get currentSquare's available moves from HTML tag somehow
 	return currentSquare;
 }
 
