@@ -18,25 +18,25 @@
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="b8" nextValidSquare="['a7', 'c7']">
+      <div class="square black-square" id="b8" data-next-valid-square="a7, c7">
         <div class="chip red" :id="player2.chips[0].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="d8" nextValidSquare="['c7', 'e7']">
+      <div class="square black-square" id="d8" data-next-valid-square="c7, e7">
         <div class="chip red" :id="player2.chips[1].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="f8" nextValidSquare="['e7', 'g7']">
+      <div class="square black-square" id="f8" data-next-valid-square="e7, g7">
         <div class="chip red" :id="player2.chips[2].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="h8" nextValidSquare="['g7']">
+      <div class="square black-square" id="h8" data-next-valid-square="g7">
         <div class="chip red" :id="player2.chips[3].chipId"></div>
       </div>
 
@@ -44,25 +44,25 @@
     <!--7th row -->
     <div class="row">
 
-      <div class="square black-square" id="a7" nextValidSquare="['b8', 'b6']">
+      <div class="square black-square" id="a7" data-next-valid-square="b8, b6">
         <div class="chip red" :id="player2.chips[4].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="c7" nextValidSquare="['b6', 'b8', 'd8', 'd6']">
+      <div class="square black-square" id="c7" data-next-valid-square="b6, b8, d8, d6">
         <div class="chip red" :id="player2.chips[5].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="e7" nextValidSquare="['d6', 'd8', 'f8', 'f6']">
+      <div class="square black-square" id="e7" data-next-valid-square="d6, d8, f8, f6">
         <div class="chip red" :id="player2.chips[6].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="g7" nextValidSquare="['f6', 'f8', 'h8', 'h6']">
+      <div class="square black-square" id="g7" data-next-valid-square="f6, f8, h8, h6">
         <div class="chip red" :id="player2.chips[7].chipId"></div>
       </div>
 
@@ -74,50 +74,50 @@
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="b6" nextValidSquare="['a5', 'a7', 'c7', 'c5']">
+      <div class="square black-square" id="b6" data-next-valid-square="a5, a7, c7, c5">
         <div class="chip red" :id="player2.chips[8].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="d6" nextValidSquare="['c5', 'c7', 'd7', 'e5']">
+      <div class="square black-square" id="d6" data-next-valid-square="c5, c7, d7, e5">
         <div class="chip red" :id="player2.chips[9].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="f6" nextValidSquare="['e5', 'e7', 'g7', 'g5']">
+      <div class="square black-square" id="f6" data-next-valid-square="e5, e7, g7, g5">
         <div class="chip red" :id="player2.chips[10].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="h6" nextValidSquare="['g5', 'g7']">
+      <div class="square black-square" id="h6" data-next-valid-square="g5, g7">
         <div class="chip red" :id="player2.chips[11].chipId"></div>
       </div>
     </div>
     <!--5th row -->
     <div class="row">
 
-      <div class="square black-square" id="a5" nextValidSquare="['b6', 'b4']">
+      <div class="square black-square" id="a5" data-next-valid-square="b6, b4">
         
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="c5" nextValidSquare="['b4', 'b6', 'd6', 'd4']">
+      <div class="square black-square" id="c5" data-next-valid-square="b4, b6, d6, d4">
         
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="e5" nextValidSquare="['d4', 'd6', 'f6', 'f4']">
+      <div class="square black-square" id="e5" data-next-valid-square="d4, d6, f6, f4">
         
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="g5" nextValidSquare="['f4', 'f6', 'h6', 'h4']">
+      <div class="square black-square" id="g5" data-next-valid-square="f4, f6, h6, h4">
         
       </div>
 
@@ -129,25 +129,25 @@
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="b4" nextValidSquare="['a3', 'a5', 'c5', 'c3']">
+      <div class="square black-square" id="b4" data-next-valid-square="a3, a5, c5, c3">
         
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="d4" nextValidSquare="['c3', 'c5', 'e5', 'e3']">
+      <div class="square black-square" id="d4" data-next-valid-square="c3, c5, e5, e3">
         
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="f4" nextValidSquare="['e3', 'e5', 'g5', 'g3']">
+      <div class="square black-square" id="f4" data-next-valid-square="e3, e5, g5, g3">
         
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="h4" nextValidSquare="['g3', 'g5']">
+      <div class="square black-square" id="h4" data-next-valid-square="g3, g5">
         
       </div>
 
@@ -155,25 +155,25 @@
     <!--3rd row -->
     <div class="row">
 
-      <div class="square black-square" id="a3" nextValidSquare="['b4', 'b2']">
+      <div class="square black-square" id="a3" data-next-valid-square="b4, b2">
         <div class="chip black" :id="player1.chips[8].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="c3" nextValidSquare="['b2', 'b4', 'd4', 'd2']">
+      <div class="square black-square" id="c3" data-next-valid-square="b2, b4, d4, d2">
         <div class="chip black" :id="player1.chips[9].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="e3" nextValidSquare="['d2', 'd4', 'f4', 'f2']">
+      <div class="square black-square" id="e3" data-next-valid-square="d2, d4, f4, f2">
         <div class="chip black" :id="player1.chips[10].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="g3" nextValidSquare="['f2', 'f4', 'h4', 'h2']">
+      <div class="square black-square" id="g3" data-next-valid-square="f2, f4, h4, h2">
         <div class="chip black" :id="player1.chips[11].chipId"></div>
       </div>
 
@@ -184,23 +184,23 @@
       
       <div class="square red-square"></div>
       
-      <div class="square black-square" id="b2" nextValidSquare="['a1', 'a3', 'c3', 'c1']">
+      <div class="square black-square" id="b2" data-next-valid-square="a1, a3, c3, c1">
         <div class="chip black" :id="player1.chips[4].chipId"></div>
       </div>
       
       <div class="square red-square"></div>
       
-      <div class="square black-square" id="d2" nextValidSquare="['c1', 'c3', 'e3', 'e1']">
+      <div class="square black-square" id="d2" data-next-valid-square="c1, c3, e3, e1">
         <div class="chip black" :id="player1.chips[5].chipId"></div>
       </div>
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="f2" nextValidSquare="['e1', 'e3', 'h3', 'h1']">
+      <div class="square black-square" id="f2" data-next-valid-square="e1, e3, h3, h1">
         <div class="chip black" :id="player1.chips[6].chipId"></div>
       </div>
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="h2" nextValidSquare="['g1', 'g3']">
+      <div class="square black-square" id="h2" data-next-valid-square="g1, g3">
         <div class="chip black" :id="player1.chips[7].chipId"></div>
       </div>
 
@@ -208,25 +208,25 @@
     <!--1st row -->
     <div class="row">
 
-      <div class="square black-square" id="a1" nextValidSquare="['b2']">
+      <div class="square black-square" id="a1" data-next-valid-square="b2">
         <div class="chip black" :id="player1.chips[0].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="c1" nextValidSquare="['b2', 'd2']">
+      <div class="square black-square" id="c1" data-next-valid-square="b2, d2">
         <div class="chip black" :id="player1.chips[1].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="e1" nextValidSquare="['d2', 'f2']">
+      <div class="square black-square" id="e1" data-next-valid-square="d2, f2">
         <div class="chip black" :id="player1.chips[2].chipId"></div>
       </div>
 
       <div class="square red-square"></div>
 
-      <div class="square black-square" id="g1" nextValidSquare="['f2', 'h2']">
+      <div class="square black-square" id="g1" data-next-valid-square="f2, h2">
         <div class="chip black" :id="player1.chips[3].chipId"></div>
       </div>
 
