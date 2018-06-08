@@ -1,146 +1,338 @@
 {
   "row8": [
     {
+      "id": "a8",
+      "nextValidSquares": null,
+      "classes": "square red-square"
+    },
+    {
       "id": "b8",
-      "nextValidSquares": [ "a7", "c7" ]
+      "nextValidSquares": [ "a7", "c7" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "c8",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "d8",
-      "nextValidSquares": [ "c7", "e7" ]
+      "nextValidSquares": [ "c7", "e7" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "e8",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "f8",
-      "nextValidSquares": [ "e7", "g7" ]
+      "nextValidSquares": [ "e7", "g7" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "g8",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "h8",
-      "nextValidSquares": [ "g7" ]
+      "nextValidSquares": [ "g7" ],
+      "classes": "square black-square"
     }
   ],
   "row7": [
     {
       "id": "a7",
-      "nextValidSquares": [ "b8", "b6" ]
+      "nextValidSquares": [ "b8", "b6" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "b7",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "c7",
-      "nextValidSquares": [ "b6", "b8", "d8", "d6" ]
+      "nextValidSquares": [ "b6", "b8", "d8", "d6" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "d7",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "e7",
-      "nextValidSquares": [ "d6", "d8", "f8", "f6" ]
+      "nextValidSquares": [ "d6", "d8", "f8", "f6" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "f7",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "g7",
-      "nextValidSquares": [ "f6", "f8", "h8", "h6" ]
+      "nextValidSquares": [ "f6", "f8", "h8", "h6" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "h7",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     }
   ],
   "row6": [
     {
+      "id": "a6",
+      "nextValidSquares": null,
+      "classes": "square red-square"
+    },
+    {
       "id": "b6",
-      "nextValidSquares": [ "a5", "a7", "c7", "c5" ]
+      "nextValidSquares": [ "a5", "a7", "c7", "c5" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "c6",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "d6",
-      "nextValidSquares": [ "c5", "c7", "d7", "e5" ]
+      "nextValidSquares": [ "c5", "c7", "d7", "e5" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "e6",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "f6",
-      "nextValidSquares": [ "e5", "e7", "g7", "g5" ]
+      "nextValidSquares": [ "e5", "e7", "g7", "g5" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "g6",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "h6",
-      "nextValidSquares": [ "g5", "g7" ]
+      "nextValidSquares": [ "g5", "g7" ],
+      "classes": "square black-square"
     }
   ],
   "row5": [
     {
       "id": "a5",
-      "nextValidSquares": [ "b6", "b4" ]
+      "nextValidSquares": [ "b6", "b4" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "b5",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "c5",
-      "nextValidSquares": [ "b4", "b6", "d6", "d4" ]
+      "nextValidSquares": [ "b4", "b6", "d6", "d4" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "d5",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "e5",
-      "nextValidSquares": [ "d4", "d6", "f6", "f4" ]
+      "nextValidSquares": [ "d4", "d6", "f6", "f4" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "f5",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "g5",
-      "nextValidSquares": [ "f4", "f6", "h6", "h4" ]
+      "nextValidSquares": [ "f4", "f6", "h6", "h4" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "h5",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     }
   ],
   "row4": [
     {
+      "id": "a4",
+      "nextValidSquares": null,
+      "classes": "square red-square"
+    },
+    {
       "id": "b4",
-      "nextValidSquares": [ "a3", "a5", "c5", "c3" ]
+      "nextValidSquares": [ "a3", "a5", "c5", "c3" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "c4",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "d4",
-      "nextValidSquares": [ "c3", "c5", "e5", "e3" ]
+      "nextValidSquares": [ "c3", "c5", "e5", "e3" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "e4",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "f4",
-      "nextValidSquares": [ "e3", "e5", "g5", "g3" ]
+      "nextValidSquares": [ "e3", "e5", "g5", "g3" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "g4",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "h4",
-      "nextValidSquares": [ "g3", "g5" ]
+      "nextValidSquares": [ "g3", "g5" ],
+      "classes": "square black-square"
     }
   ],
   "row3": [
     {
       "id": "a3",
-      "nextValidSquares": [ "b4", "b2" ]
+      "nextValidSquares": [ "b4", "b2" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "b3",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "c3",
-      "nextValidSquares": [ "b2", "b4", "d4", "d2" ]
+      "nextValidSquares": [ "b2", "b4", "d4", "d2" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "d3",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "e3",
-      "nextValidSquares": [ "d2", "d4", "f4", "f2" ]
+      "nextValidSquares": [ "d2", "d4", "f4", "f2" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "f3",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "g3",
-      "nextValidSquares": [ "f2", "f4", "h4", "h2" ]
+      "nextValidSquares": [ "f2", "f4", "h4", "h2" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "h3",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     }
   ],
   "row2": [
     {
+      "id": "a2",
+      "nextValidSquares": null,
+      "classes": "square red-square"
+    },
+    {
       "id": "b2",
-      "nextValidSquares": [ "a1", "a3", "c3", "c1" ]
+      "nextValidSquares": [ "a1", "a3", "c3", "c1" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "c2",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "d2",
-      "nextValidSquares": [ "c1", "c3", "e3", "e1" ]
+      "nextValidSquares": [ "c1", "c3", "e3", "e1" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "e2",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "f2",
-      "nextValidSquares": [ "e1", "e3", "h3", "h1" ]
+      "nextValidSquares": [ "e1", "e3", "h3", "h1" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "g2",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "h2",
-      "nextValidSquares": [ "g1", "g3" ]
+      "nextValidSquares": [ "g1", "g3" ],
+      "classes": "square black-square"
     }
   ],
   "row1": [
     {
       "id": "a1",
-      "nextValidSquares": [ "b2" ]
+      "nextValidSquares": [ "b2" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "b1",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "c1",
-      "nextValidSquares": [ "b2", "d2" ]
+      "nextValidSquares": [ "b2", "d2" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "d1",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "e1",
-      "nextValidSquares": [ "d2", "f2" ]
+      "nextValidSquares": [ "d2", "f2" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "f1",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     },
     {
       "id": "g1",
-      "nextValidSquares": [ "f2", "h2" ]
+      "nextValidSquares": [ "f2", "h2" ],
+      "classes": "square black-square"
+    },
+    {
+      "id": "h1",
+      "nextValidSquares": null,
+      "classes": "square red-square"
     }
   ]
 }
