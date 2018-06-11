@@ -1,0 +1,107 @@
+{
+
+  "name": null,
+
+  "color": "red",
+
+  "chips" : [
+
+    {
+      "chipId" : "red-1",
+      "defaultSquare" : "b8",
+      "currentSquare" : "b8",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-2",
+      "defaultSquare" : "d8",
+      "currentSquare" : "d8",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-3",
+      "defaultSquare" : "f8",
+      "currentSquare" : "f8",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-4",
+      "defaultSquare" : "h8",
+      "currentSquare" : "h8",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-5",
+      "defaultSquare" : "a7",
+      "currentSquare" : "a7",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-6",
+      "defaultSquare" : "c7",
+      "currentSquare" : "c7",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-7",
+      "defaultSquare" : "e7",
+      "currentSquare" : "e7",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-8",
+      "defaultSquare" : "g7",
+      "currentSquare" : "g7",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-9",
+      "defaultSquare" : "b6",
+      "currentSquare" : "b6",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-10",
+      "defaultSquare" : "d6",
+      "currentSquare" : "d6",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-11",
+      "defaultSquare" : "f6",
+      "currentSquare" : "f6",
+      "isKing" : false,
+      "isCaptured" : false
+    },
+
+    {
+      "chipId" : "red-12",
+      "defaultSquare" : "h6",
+      "currentSquare" : "h6",
+      "isKing" : false,
+      "isCaptured" : false
+    }
+
+  ]
+
+}
